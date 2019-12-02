@@ -1,4 +1,4 @@
-const defineTest = require('jscodeshift/dist/testUtils').defineTest;
+const { defineTest } = require('jscodeshift/dist/testUtils');
 
 defineTest(__dirname, 'camelcase', null, 'camelcase/messenger-context');
 defineTest(__dirname, 'camelcase', null, 'camelcase/messenger-event');

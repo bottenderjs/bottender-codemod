@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 const { camelcase } = require('messaging-api-common');
 
 module.exports = function(file, api, options) {

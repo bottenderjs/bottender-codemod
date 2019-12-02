@@ -13,7 +13,7 @@ if (!transformName) {
 const args = process.argv.slice(3).join(' ');
 
 // jscodeshift -t <codemod-script> <file>
-childProcess.exec(
+const cp = childProcess.exec(
   `npx jscodeshift -t ${path.resolve(
     __dirname,
     '..',
@@ -21,3 +21,6 @@ childProcess.exec(
     `${transformName}.js`
   )} ${args}`
 );
+
+cp.stdout.pipe(process.stdout);
+cp.stderr.pipe(process.stderr);
